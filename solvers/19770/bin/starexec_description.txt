@@ -1,0 +1,4 @@
+The AProVE version that participated in SMTCOMP 2011 for QF_NIA.
+Essentially unchanged, except for the new StarExec start script
+and the lift from 2500 MB heap memory to 20000 MB heap memory
+for the Java virtual machine.

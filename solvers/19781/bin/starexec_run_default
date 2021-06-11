@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Run script for SMTInterpol for the STAREXEC cluster
+
+if [ "$#" -gt 1 ]; then
+  # ignore bogus parameters given by starexec
+  set -- "$1"
+fi
+
+java -Xms1536m -Xmx$((STAREXEC_MAX_MEM/2))m -da -dsa -XX:-UseGCOverheadLimit -jar smtinterpol.jar -q -o continue-on-error=false "$@"

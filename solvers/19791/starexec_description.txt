@@ -1,0 +1,2 @@
+Yices 2.6.0 Submisssion for SMTCOMP 2018
+

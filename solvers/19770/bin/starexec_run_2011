@@ -1,0 +1,3 @@
+#!/bin/sh
+export PATH=`pwd`:$PATH
+java -Xmx2500m -jar aprove.jar -d diologic -m smtlib $1

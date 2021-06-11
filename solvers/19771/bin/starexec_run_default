@@ -1,0 +1,3 @@
+#!/bin/sh
+
+./boolector -uc --fun:preprop --prop:nprops=10000 -nadd 0 --default-cadical $1
