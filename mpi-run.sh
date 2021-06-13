@@ -13,6 +13,10 @@ echo main node: ${AWS_BATCH_JOB_MAIN_NODE_INDEX}
 echo this node: ${AWS_BATCH_JOB_NODE_INDEX}
 echo Downloading problem from S3: ${COMP_S3_PROBLEM_PATH}
 
+echo S3 bucket: ${S3_BKT}
+aws s3 ls
+aws s3 ls s3://${S3_BKT}
+
 if [[ "${COMP_S3_PROBLEM_PATH}" == *".xz" ]];
 then
   aws s3 cp s3://${S3_BKT}/${COMP_S3_PROBLEM_PATH} test.cnf.xz
