@@ -58,8 +58,9 @@ wait_for_nodes () {
   cat combined_hostfile
 
   # REPLACE THE FOLLOWING LINE WITH YOUR PARTICULAR SOLVER
-  mv test.cnf test.smt2
-  time mpirun --mca btl_tcp_if_include eth0 --allow-run-as-root -np ${AWS_BATCH_JOB_NUM_NODES} --hostfile combined_hostfile Par-SMT-COMP-2021/bin/starexec_run_default test.smt2
+  #time mpirun --mca btl_tcp_if_include eth0 --allow-run-as-root -np ${AWS_BATCH_JOB_NUM_NODES} --hostfile combined_hostfile Par-SMT-COMP-2021/bin/starexec_run_default test.smt2
+  mv test.cnf test.smt2 || mv Par-SMT-COMP-2021/extensions.smt2 test.smt2
+  Par-SMT-COMP-2021/bin/starexec_run_default test.smt2
 }
 
 # Fetch and run a script
