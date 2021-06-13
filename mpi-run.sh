@@ -64,6 +64,7 @@ wait_for_nodes () {
   ls -al Par-SMT-COMP-2021/
   ls -al Par-SMT-COMP-2021/bin/
   Par-SMT-COMP-2021/bin/starexec_run_default test.smt2
+  echo "Result: $?"
 }
 
 # Fetch and run a script
